@@ -79,10 +79,7 @@ a:focus, a:active:focus, button:focus, button:active {
   color: #ffffff;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+
 
 input {
   position: relative;
