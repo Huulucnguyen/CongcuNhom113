@@ -1,0 +1,264 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths desktop landscape" lang="en"><head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="{% static 'index_source/js' %}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133007251-1');
+</script>
+		
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+
+		<!-- Favicon for Desktop, iOS and android -->
+		<link rel="apple-touch-icon" sizes="57x57" href="http://classifyhouse.com/assets/images/favicons/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="http://classifyhouse.com/assets/images/favicons/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="http://classifyhouse.com/assets/images/favicons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="http://classifyhouse.com/assets/images/favicons/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="http://classifyhouse.com/assets/images/favicons/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="http://classifyhouse.com/assets/images/favicons/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="http://classifyhouse.com/assets/images/favicons/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="http://classifyhouse.com/assets/images/favicons/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="http://classifyhouse.com/assets/images/favicons/apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" href="http://classifyhouse.com/assets/images/favicons/android-chrome-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="http://classifyhouse.com/assets/images/favicons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="http://classifyhouse.com/assets/images/favicons/favicon-16x16.png" sizes="16x16">
+		<link rel="mask-icon" href="http://classifyhouse.com/assets/images/favicons/safari-pinned-tab.svg">
+
+		<link href="{% static 'index_source/css.css' %}" rel="stylesheet">
+
+		<link href="{% static 'index_source/bootstrap.css' %}" rel="stylesheet"> 
+		<link href="{% static 'index_source/font-awesome.css' %}" rel="stylesheet">
+		<link href="{% static 'index_source/simple-line-icons.css' %}" rel="stylesheet">
+		<link href="{% static 'index_source/magnific-popup.css' %}" rel="stylesheet">
+		<link href="{% static 'index_source/aos.css' %}" rel="stylesheet">
+		<link href="{% static 'index_source/flexslider.css' %}" rel="stylesheet">
+		<link href="{% static 'index_source/style.css' %}" rel="stylesheet">
+		<link href="{% static 'index_source/color-1.css' %}" rel="stylesheet"> <!-- Color Scheme -->
+ 		
+		<script src="{% static 'index_source/modernizr.js' %}"></script><style>@media print {#ghostery-tracker-tally {display:none !important}}</style>
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script> 
+		<![endif]-->
+		<!-- ShareThis -->
+		<script src="{% static 'index_source/sharethis.js' %}"></script>
+		<!-- Webmaster tools for Google -->
+		<style>
+			img {
+  border-radius: 30%;
+}
+		</style>
+	</head>
+
+<body data-aos-easing="ease" data-aos-duration="700" data-aos-delay="300">
+
+	<!-- Start Preloader -->
+	<div id="page-preloader" style="display: none;">
+		<svg class="circular" height="50" width="50">
+			<circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"></circle>
+		</svg>
+	</div>
+	<!-- End Preloader -->
+
+	<!-- Start Content -->
+	<section id="main" class="wrapper">
+
+		<!-- Start Header -->
+		<header id="home" class="header-container">
+			<div class="container-fluid header-content">
+
+				<span class="trapeze-bg"></span>
+
+				<div class="container screen-container">
+					<div class="row">
+
+						<div class="col-md-12 title-center-content">
+
+							<div class="col-md-6 title-text animation-right">
+								<h1>
+									<!--<span class="text-notice-line">Classify House A.I. uncovers a houses design.</span>-->
+									<span class="text-notice-line">Đánh giá sản phẩm dựa trên comment của khách hàng</span>
+								</h1>
+								<p>
+								Nhập địa chỉ liên kết của sản phẩm trên một trang thương mại điện tử mà bạn muốn đánh giá.<br>
+								(Hiện tại chỉ hỗ trợ những sản phẩm bán trên Shopee)
+								</p>
+
+								<form method="post" id = "search">
+									{% csrf_token %}
+								<input style="width:90%" type="text" name="text" id="text" placeholder="Nhập địa chỉ trang web">
+								<input onclick="var e=this;setTimeout(function(){e.disabled=true;},0);return true;" class="button hero-button smooth" type="submit" id="submit" value="Đánh giá">
+
+								</form>
+
+							</div>
+						
+							<div class="col-md-6 title-product animation-left">
+					
+								<img src="{% static 'index_source/text.jpg' %}" alt="logo" style="width:800px;height:400px;">
+							</div>
+						
+						</div>
+
+				
+					</div>
+				</div>
+
+			</div>
+		</header>
+		<!-- End Header -->
+
+		<!-- Start Navigation -->
+		<nav id="navigation" class="navbar navbar-default navbar-top">
+			<div class="container-fluid">
+
+				<div class="nav-bg top-nav"></div>
+
+				<div class="container">
+
+					<div class="navbar-button">
+						<ul class="ul-btn">
+							<li><a href="#home" class="button action-button-nav smooth" title="Upload">Trang chủ</a></li>
+						</ul>
+					</div>
+
+					<div class="navbar-header">
+						<button id="nav-icon" type="button" class="navbar-toggle collapsed nav-icon" data-toggle="collapse" data-target="#menu-navbar" aria-expanded="false">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+						</button>
+						<a class="navbar-brand smooth" href="#home">Classify Text<span class="logo-promo-text">Tin cậy cao hơn.</span></a> <!-- Title / Tagline -->
+					</div>
+
+					<div class="collapse navbar-collapse" id="menu-navbar">
+					
+					</div>
+
+					<div class="clearfix"></div>
+
+				</div>
+			</div>
+		</nav>
+		<!-- End Navigation -->
+
+	
+
+		<!-- Start Newsletter Form
+		<section id="newsletter" class="newsletter block">
+			<div class="container">
+				<div class="row">
+
+					<h2>Newsletter</h2>
+
+					<div class="block-desc">
+						<p>Iusto odio dignissimos ducimus, qui dolorem. Nihil impedit, quo voluptas assumenda est, qui ratione voluptatem sequi aboriosam, nisi ut perspiciatis nesciunt neque.</p>
+					</div>
+
+	
+					<div class="col-md-12 form-block">
+						<form id="newsletter-form" class="newsletter-form" action="newsletter.php">
+							<div class="newsletter-field-group">
+								<input id="newsletter-email" type="text" name="newsletter-email" placeholder="Enter you email"><button id="newsletter-submit" type="submit" class="button submit-button">Submit</button>
+								<span class="nf-error-message">Enter a valid email</span>
+							</div>
+						</form>
+						<span class="newsletter-notice">We don't like spam too</span>
+					</div>
+					<!-- End Form -->
+
+				
+			 <!-- .container -->
+		</section>
+		<!-- End Newsletter Form -->
+
+		<!-- Start Footer -->
+		<footer id="footer" class="footer">
+
+			<div class="footer-bg">
+				<div class="footer-bg-img"></div>
+				<div class="footer-bg-overlay"></div>
+				<span class="trapeze-footer-bg"></span>
+			</div>
+
+			<div class="container footer-first-line">
+				<div class="row">
+
+					<!-- Start Text in Footer -->
+					<div class="col-md-6 footer-about">
+
+						<h2>Danhgiasanpham.com</h2>
+						<p>
+							Đây là trang web đánh giá sản phẩm.
+						</p>
+
+					
+
+					</div>
+					<!-- End Text in Footer -->
+
+					<!-- Start Contacts -->
+					<div id="contact" class="col-md-6 footer-contacts">
+
+						<h2><span class="text-notice">Liên hệ</span></h2>
+
+						<p>Nếu có vấn đề gì, xin hãy liên hệ đến đây.</p>
+
+						<ul>
+
+							<li><strong>Facebook:</strong> https://facebook.com/</li>
+					
+						</ul>
+
+					</div>
+					<!-- End Contacts -->
+
+				</div>
+			</div> <!-- .footer-first-line -->
+
+			<div style="z-index: 5000; display:none;" id="loadingDiv">
+				<table style="margin: 0px auto;">
+					<tr>
+						<td style="padding-top:200px;" align ="center"><img src="https://www.punjabidharti.com/wp-content/plugins/wp-email/images/loading.gif" alt="loading image"/></td>
+					</tr>
+				</table>
+			</div>
+	
+	<!-- End Content -->
+
+<!-- Include JS -->
+<script src="{% static 'index_source/jquery.js' %}"></script>
+<script src="{% static 'index_source/bootstrap.js' %}"></script>
+<script src="{% static 'index_source/device.js' %}"></script>
+<script src="{% static 'index_source/retina.js' %}"></script>
+<script src="{% static 'index_source/nav.js' %}"></script>
+<script src="{% static 'index_source/smooth-scroll.js' %}"></script>
+<script src="{% static 'index_source/parallax.js' %}"></script>
+<script src="{% static 'index_source/aos.js' %}"></script>
+<script src="{% static 'index_source/flexslider.js' %}"></script>
+<script src="{% static 'index_source/youtubebackground.js' %}"></script>
+<script src="{% static 'index_source/magnific-popup.js' %}"></script>
+<script src="{% static 'index_source/init.js' %}"></script>
+<script>$('#search').submit(function() {
+    // javascript way
+    document.getElementById("loadingDiv").style.display = 'block';
+    // jquery way
+    $('#loadingDiv').show();  
+});</script>
+<!--[if lte IE 9]>
+<script src="assets/js/placeholders.js"></script>
+<script src="assets/js/init-for-ie.js"></script>
+<![endif]-->
+
+
+</body></html>
